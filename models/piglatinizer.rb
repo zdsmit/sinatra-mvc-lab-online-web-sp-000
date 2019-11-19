@@ -1,12 +1,7 @@
 class PigLatinizer
-  attr_accessor :text
 
-  def initialize(text)
-    @text = text
-  end
-
-  def convert
-    a = @text.split(" ")
+  def convert(text)
+    a = text.split(" ")
     b = a.map {|word| convert_word(word)}
     b.join(" ")
   end
